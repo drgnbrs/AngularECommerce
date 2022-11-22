@@ -1,0 +1,28 @@
+
+<nav class="navbar navbar-light bg-warning">
+  <div class="container-fluid">
+      <h1 style="color: #fcfeff;">Alışverişe hoşgeldiniz</h1>
+  </div>
+</nav>
+
+<div class="card">
+  <div class="text-center">
+    <h1>Giriş Yapınız</h1>
+    <h6>Lütfen Epostanızı ve Parolanızı Giriniz</h6>
+  </div>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <form>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">EPosta</label>
+        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Parola</label>
+        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button routerLink="/products" type="submit" class="btn btn-primary mb-2">Giriş yap</button>
+    </form>
+    <a style="color: #fff; margin-top:10px" routerLink="/signup">Hesap Oluşturmak İçin Tıklayınız</a>
+  </form>
+</div>
+  

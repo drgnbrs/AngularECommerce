@@ -1,0 +1,33 @@
+<nav class="navbar navbar-light bg-warning">
+    <div class="container-fluid">
+        <h1 style="color: aliceblue;">Alışverişe hoşgeldiniz</h1>
+    </div>
+</nav>
+<div class="card">
+  <div class="text-center">
+    <h1>Hesap Oluştur</h1>
+    <h6>Kayıt olun</h6>
+  </div>
+  <form>
+    <form [formGroup]="signupForm" (ngSubmit)="signUp()">
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">İsim Soyisim</label>
+        <input formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Telefon</label>
+        <input formControlName="mobile" type="number" class="form-control" id="exampleInputPassword1">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">EPosta</label>
+        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Parola</label>
+        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+      </div>
+      <button type="submit" class="btn btn-primary mb-2">Hesap Oluştur</button>
+    </form>
+    <a style="color: #fff; margin-top:10px" routerLink="/login">Hesabınız varsa giriş yapmak için tıklayınız</a>
+  </form>
+</div>
