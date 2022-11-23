@@ -8,6 +8,7 @@ import { ProductsComponent } from './components/products/products.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
+import { CartComponent } from './components/cart/cart.component';
 
 
 
@@ -18,6 +19,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     SignupComponent,
     ProductsComponent,
     NavbarComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

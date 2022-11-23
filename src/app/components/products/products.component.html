@@ -9,9 +9,9 @@
            </div>
            <span class="fas fa-search search-icon"></span>
         </div>
-        <button class="btn btn-warning">
+        <button routerLink="/cart" class="btn btn-warning">
             <i style="font-size: 40px;" class="fas fa-cart-plus"></i>
-            <div style="font-size: 10px;" class="badge bg-danger">5</div>
+            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
         </button>
     </div>
 </header>
@@ -55,7 +55,7 @@
                 <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
                 <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
                 <p><strong>Price:</strong>${{item.price}}</p>
-                <button class="btn btn-warning">Add to card</button>
+                <button class="btn btn-warning" (click)=addtocart(item)>Add to card</button>
             </div>
         </ng-container>
         
