@@ -9,10 +9,17 @@ import { CartService } from 'src/app/service/cart.service';
 export class CartComponent {
 
   public products : any = [];
+  public totalItem : number = 0;
   public grandTotal !: number;
   constructor(private cartService : CartService) {}
 
   ngOnInit(): void {
+
+    this.cartService.getProducts()
+      .subscribe(res=>{
+        this.totalItem = res.length;
+      })
+
 this.cartService.getProducts()
 .subscribe(res=>{
   this.products = res;
