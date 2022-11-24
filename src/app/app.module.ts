@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
 import { SignupComponent } from './components/signup/signup.component';
 import { ProductsComponent } from './components/products/products.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
+import { FilterPipe } from './shared/filter.pipe';
 
 
 
@@ -19,12 +20,14 @@ import { CartComponent } from './components/cart/cart.component';
     SignupComponent,
     ProductsComponent,
     NavbarComponent,
-    CartComponent
+    CartComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule
     
   ],

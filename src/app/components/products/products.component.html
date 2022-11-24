@@ -5,7 +5,7 @@
                 <strong>Amazed</strong>
             </i>
            <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search Products">
+            <input type="text" class="form-control" ((ngModel))="searchTerm" (keyup)="search($event)" placeholder="Search Products">
            </div>
            <span class="fas fa-search search-icon"></span>
         </div>
@@ -16,40 +16,37 @@
     </div>
 </header>
 
-<div style="border: 10px;" class="card-top container-fluid">
+<div class="card-top container-fluid">
     <div class="container d-flex">
         <div class="item">
-            <a >
+            <a (click)="filter('')">
                 <img src="https://cdn-icons-png.flaticon.com/512/1519/1519722.png" alt="">
                 <h6>Tüm Ürünler</h6>
             </a>
         </div>
         <div class="item">
-            <a >
+            <a (click)="filter('electronics')">
                 <img src="https://cdn-icons-png.flaticon.com/512/896/896493.png" alt="">
                 <h6>Elecronics</h6>
             </a>
         </div>
         <div class="item">
-            <a >
+            <a (click)="filter('fashion')">
                 <img src="https://cdn-icons-png.flaticon.com/512/2357/2357063.png" alt="">
                 <h6>Fashion</h6>
             </a>
         </div>
         <div class="item">
-            <a >
+            <a (click)="filter('jewelery')">
                 <img src="https://cdn-icons-png.flaticon.com/512/3451/3451934.png" alt="">
                 <h6>Jewelry</h6>
             </a>
-        </div>
-        <div class="item">
-           
         </div>
     </div>
 </div>
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of productList">
+        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
             <div class="card col-md-3">
                 <img src="{{item.image}}" alt="">
                 <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
