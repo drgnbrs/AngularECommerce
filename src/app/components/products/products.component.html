@@ -1,22 +1,24 @@
-<header>
-    <div class="navbar navbar-dark bg-warning shadow-sm">
-        <div class="navbar-brand align-item-center d-flex">
-            <i style="font-size: 40px; margin-left: 5px;" class="fas fa-shopping-bag">&nbsp;
-                <strong>Amazed</strong>
-            </i>
-           <div class="form-group">
-            <input type="text" class="form-control" ((ngModel))="searchTerm" (keyup)="search($event)" placeholder="Search Products">
-           </div>
-           <span class="fas fa-search search-icon"></span>
-        </div>
-        <button routerLink="/cart" class="btn btn-warning">
-            <i style="font-size: 40px;" class="fas fa-cart-plus"></i>
-            <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
-        </button>
-    </div>
-</header>
 
-<div class="card-top container-fluid">
+    <header> <!--Header Bölümü-->
+        <div class="navbar navbar-dark bg-warning shadow-sm">
+            <div class="navbar-brand align-item-center d-flex">
+                <i style="font-size: 40px; margin-left: 5px;" class="fas fa-shopping-bag">&nbsp;
+                    <strong>Amazed</strong>
+                </i>
+               <div class="form-group">
+                    <input type="text" class="form-control" ((ngModel))="searchTerm" (keyup)="search($event)" placeholder="Search Products">
+                    <span class="fas fa-search search-icon"></span>
+               </div>
+               
+            </div>
+            <button routerLink="/cart" class="btn btn-warning">
+                <i style="font-size: 40px;" class="fas fa-cart-plus"></i>
+                <div style="font-size: 10px;" class="badge bg-danger">{{totalItem}}</div>
+            </button>
+        </div>
+    </header>
+<div class="backImage">
+<div class="card-top container-fluid"> <!--Ürün Filtreleri Bölümü-->
     <div class="container d-flex">
         <div class="item">
             <a (click)="filter('')">
@@ -44,7 +46,7 @@
         </div>
     </div>
 </div>
-<div class="container">
+<div class="container"> <!--Ürün Bilgilerinin Bulunduğu Bölüm-->
     <div class="row">
         <ng-container *ngFor="let item of filterCategory | filter:searchKey:'title'">
             <div class="card col-md-3">
@@ -54,7 +56,7 @@
                 <p><strong>Price:</strong>${{item.price}}</p>
                 <button class="btn btn-warning" (click)=addtocart(item)>Add to card</button>
             </div>
-        </ng-container>
-        
+        </ng-container>  
     </div>
+</div>
 </div>

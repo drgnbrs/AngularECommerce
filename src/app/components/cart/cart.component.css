@@ -54,3 +54,7 @@ h4, h6 {
     padding: 12px 72px;
     border-radius: 3px !important;
 }
+
+.backImage{
+background-image: url(https://media.istockphoto.com/id/1299275641/tr/vekt%C3%B6r/gri-al%C4%B1%C5%9Fveri%C5%9F-arabas%C4%B1-doku.jpg?s=612x612&w=0&k=20&c=dD8HHaCp9649BWRuei7vPDIrVQHWonEVlkE9FaAOBiI=);
+}
