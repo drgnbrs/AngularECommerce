@@ -22,13 +22,11 @@ export class SignupComponent implements OnInit{
     })
   }
   signUp(){
-    this.http.post<any>("http://localhost:3000/signupusers", this.signupForm.value)
+    this.http.post<any>("http://localhost:3000/signupusers",this.signupForm.value)
     .subscribe(res=>{
-      alert("Hesap başarıyla oluşturuldu");
+      alert("Kayıt Başarılı");
       this.signupForm.reset();
       this.router.navigate(['login']);
-    },err=>{
-      alert("Birşeyler ters gitti!")
     })
+    }
   }
-}

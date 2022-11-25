@@ -10,7 +10,7 @@ import { OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public loginForm!: FormGroup
+  public loginForm!: FormGroup;
   constructor( private formBuilder : FormBuilder, private http : HttpClient, private router: Router) {}
 
   ngOnInit(): void {
@@ -29,14 +29,10 @@ export class LoginComponent implements OnInit {
       if(user){
         alert("Giriş Başarılı");
         this.loginForm.reset();
-        this.router.navigate(['products'])
+        this.router.navigate(['products']);
       }else{
-        alert("Kullanıcı bulunamadı")
+        alert("Kullanıcı bulunamadı");
       }
-    },err=>{
-      alert("Birşeyler ters gitti!!")
-    })
-    
+    })  
   }
-
 }

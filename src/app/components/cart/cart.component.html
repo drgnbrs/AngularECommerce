@@ -4,10 +4,6 @@
             <i style="font-size: 40px; margin-left: 5px;" class="fas fa-shopping-bag">&nbsp;
                 <strong>Amazed</strong>
             </i>
-           <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search Products">
-           </div>
-           <span class="fas fa-search search-icon"></span>
         </div>
         <button class="btn btn-warning">
             <i style="font-size: 40px;" class="fas fa-cart-plus"></i>
@@ -23,13 +19,13 @@
                         <thead>
                             <tr>
                                 <th>Sr.No</th>
-                                <th>Product Name</th>
-                                <th>Product Image</th>
-                                <th>Description</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                                <th>Action</th>
+                                <th>Ürün Adı</th>
+                                <th>Ürün Fotoğrafı</th>
+                                <th>Ürün Açıklaması</th>
+                                <th>Fiyat</th>
+                                <th>Miktar</th>
+                                <th>Toplam</th>
+                                <th>Ürünü Sepetten Sil</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -47,10 +43,10 @@
                             </tr>
                             <tr>
                                 <td colspan="4"></td>
-                                <td><button (click)="emptycart()" class="btn btn-danger">Empty Cart</button></td>
-                                <td><button routerLink="/products" class="btn btn-primary">Shop More</button></td>
-                                <td><button class="btn btn-success">Check Out</button></td>
-                                <td><strong>Grand Total : ${{grandTotal}}</strong></td>
+                                <td><button (click)="emptycart()" class="btn btn-danger">Sepeti Boşalt</button></td>
+                                <td><button routerLink="/products" class="btn btn-primary">Daha Fazla</button></td>
+                                <td><button class="btn btn-success">Satın Al</button></td>
+                                <td><strong>Toplam : ${{grandTotal}}</strong></td>
                             </tr>
                         </tbody>
                     </table>
@@ -61,13 +57,13 @@
     <ng-container *ngIf="products.length ==0">
         <div class="container">
             <div class="card">
-                <h5 class="card-title">My Cart</h5>
+                <h5 class="card-title">Sepetim</h5>
             </div>
             <div class="center">
                 <img src="https://cdn-icons-png.flaticon.com/512/2331/2331970.png" alt="">
-                <h4>Your cart is empty!</h4>
-                <h6>Add item to it now</h6>
-                <button routerLink="/products" class="btn btn-warning">Shop Now</button>
+                <h4>Sepet Boş!</h4>
+                <h6>Sepete Ürün Ekleyiniz</h6>
+                <button routerLink="/products" class="btn btn-warning">Alışverişe Devam Et</button>
             </div>
         </div>
     </ng-container>

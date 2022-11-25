@@ -1,0 +1,21 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "signupusers": [
+    {
+      "fullname": "baris",
+      "email": "baris@baris.com",
+      "password": "12345",
+      "mobile": 12345,
+      "id": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
