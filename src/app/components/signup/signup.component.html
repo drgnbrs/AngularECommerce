@@ -14,21 +14,26 @@
     <form [formGroup]="signupForm" (ngSubmit)="signUp()">
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">İsim Soyisim</label>
-        <input formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1">
+        <input formControlName="fullname" type="text" class="form-control" id="exampleInputPassword1" placeholder="İsim Soyisim">
+        <span class="text-danger" *ngIf="signupForm.controls['fullname'].dirty && signupForm.hasError('required','fullname')">*İsim gereklidir</span>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Telefon</label>
-        <input formControlName="mobile" type="number" class="form-control" id="exampleInputPassword1">
+        <input formControlName="mobile" type="number" class="form-control" id="exampleInputPassword1" placeholder="Telefon">
+        <span class="text-danger" *ngIf="signupForm.controls['mobile'].dirty && signupForm.hasError('required','mobile')">*Telefon numarası gereklidir</span>
+
       </div>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">EPosta</label>
-        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="EPosta">
+        <span class="text-danger" *ngIf="signupForm.controls['email'].dirty && signupForm.hasError('required','email')">*Eposta gereklidir</span>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Parola</label>
-        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Parola">
+        <span class="text-danger" *ngIf="signupForm.controls['password'].dirty && signupForm.hasError('required','password')">*Şifre gereklidir</span>
       </div>
-      <button type="submit" class="btn btn-primary mb-2">Hesap Oluştur</button>
+      <button type="submit" [disabled]="!signupForm.valid" class="btn btn-primary mb-2">Hesap Oluştur</button>
     </form>
     <a style="color: #fff; margin-top:10px" routerLink="/login">Hesabınız varsa giriş yapmak için tıklayınız</a>
   </form>

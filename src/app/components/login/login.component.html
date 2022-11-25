@@ -15,11 +15,13 @@
     <form>
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">EPosta</label>
-        <input formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <input placeholder="Eposta" formControlName="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <span class="text-danger" *ngIf="loginForm.controls['email'].dirty && loginForm.hasError('required','email')">*EPosta gereklidir</span>
       </div>
       <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Parola</label>
-        <input formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+        <input placeholder="Parola" formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+        <span class="text-danger" *ngIf="loginForm.controls['password'].dirty && loginForm.hasError('required','password')">*Parola gereklidir</span>
       </div>
       <button routerLink="/products" type="submit" class="btn btn-primary mb-2">Giriş yap</button>
     </form>
