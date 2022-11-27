@@ -4,7 +4,7 @@ Projeyi oluştururken [Angular CLI](https://github.com/angular/angular-cli)'ın 
 
 ## Server'lar
 
-Server'a `ng serve` kodu uygulanınca `http://localhost:4200/` sayfasına yönlendiriliyor ve uygulama çalışmaya başlıyor. Json server içinse 'json-server --watch db.json' kodunu uygulanması gerekiyor.
+Server'a `ng serve` kodu uygulanınca `http://localhost:4200/` sayfasına yönlendiriliyor ve uygulama çalışmaya başlıyor. Json server içinse `json-server --watch db.json` kodunu uygulanması gerekiyor.
 
 ## Proje Açıklaması
 Uygulama çalışmaya başladığında bizi login sayfası karşılıyor. Oradan signup ekranına geçiş yapıp sistea kayıt olmak gerekiyor. Kayıt yapıldıktan sonra tekrar login ekranından o kayıtla giriş yapılabiliyor.
