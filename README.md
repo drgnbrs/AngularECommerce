@@ -1,27 +1,13 @@
-# Finalproject
+# ECommerceProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.0.
+Projeyi oluştururken [Angular CLI](https://github.com/angular/angular-cli)'ın 14.2.6 versiyonunu kullandım.
 
-## Development server
+## Server'lar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Server'a `ng serve` kodu uygulanınca `http://localhost:4200/` sayfasına yönlendiriliyor ve uygulama çalışmaya başlıyor. Json server içinse 'json-server --watch db.json' kodunu uygulanması gerekiyor.
 
-## Code scaffolding
+## Proje Açıklaması
+Uygulama çalışmaya başladığında bizi login sayfası karşılıyor. Oradan signup ekranına geçiş yapıp sistea kayıt olmak gerekiyor. Kayıt yapıldıktan sonra tekrar login ekranından o kayıtla giriş yapılabiliyor.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Giriş yapılınca bizi ürünlerin olduğu sayfa karşılıyor. Burada arama, filtreleme, ürünleri sepete ekleme gibi işlemler yapılabiliyor. Sepet kısmında sepee eklenen ürünlerin bilgileri, sepetin toplam tutarı gibi bilgiler görülüyor. İstenirse alışverişe devam edilebilir, sepetten istenilen ürünler veya hepsi silinebilir. Sepet boşsa bizi sepetin boş olduğunu gösteren bir ekran gösteriliyor.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
